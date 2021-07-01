@@ -9,6 +9,10 @@
      box-sizing: border-box; 
   }
 
+body {
+  display: flex;
+}
+
 #header {
   padding: 14px 16px;
   background-color: black;
@@ -18,6 +22,14 @@
 }
 #title {
   text-align: center;
+}
+#content {
+  background-color: white;
+  color: black;
+  font-family: 'Lato', san-serif;
+  font-size: 17px;
+  text-align: center;
+  flex-grow: 2;
 }
 #copyright {
   text-align: center;
