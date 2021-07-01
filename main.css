@@ -16,26 +16,28 @@
   text-align: center; 
   font-size: 25px;
 }
+
 #title {
   text-align: center;
 }
+
 #content {
+  padding: 1000px 16px;
   background-color: white;
   color: black;
   font-family: 'Lato', san-serif;
   font-size: 17px;
   text-align: center;
-  flex-grow: 2;
+  background-color: #0a0a0a;
+;
 }
 #copyright {
   padding: 14px 16px;
   font-family: 'Lato', san-serif;
   text-align: center; 
-  text-align: center;
   font-size: 15px;
   color: white;
   background-color: black;
-  float: left;
   position: absolute;
   width: 100%;
   bottom: 0;
