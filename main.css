@@ -67,12 +67,12 @@
   top: 0;
   height: 100vh;
   padding: 14px 16px;
-  color: white;
+  color:  #eddddd;
   font-family: 'Lato', san-serif;
   font-size: 17px;
   background-color: #0a0a0a;
 }
-#content h2 {
+#content h1 {
   text-align: center;
   padding: 40px 20px;
 }
@@ -83,7 +83,7 @@
   font-family: 'Lato', san-serif;
   text-align: center; 
   font-size: 15px;
-  color: white;
+  color:  #eddddd;
   background-color: black;
   position: absolute;
   width: 100%;
