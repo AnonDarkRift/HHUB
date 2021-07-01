@@ -9,27 +9,19 @@
      padding: 0;
      box-sizing: border-box; 
   }
- 
-#header {
-  z-index: 1;
-  height: auto;
-  top: 0;
-  width: 100%;
-  padding: 14px 16px;
-  display: inline-flex;
-  background-color: black;
-  font-family: 'Lato', san-serif;
-  text-align: center; 
-  font-size: 25px;
-}
+
 
 .topnav {
+  z-index: 1;
   position: relative;
   background-color: black;
   overflow: hidden;
 }
 
 .topnav a {
+  font-family: 'Lato', san-serif;
+  text-align: center; 
+  font-size: 25px;
   float: left;
   color: #eddddd;
   text-align: center;
