@@ -20,6 +20,14 @@
   font-size: 25px;
 }
 
+#header button {
+  color: #eddddd;;
+  background-color: black;
+  font-family: 'Lato', san-serif;
+  text-align: center; 
+  font-size: 25px;
+}
+
 #title {
   text-align: center;
 }
@@ -74,3 +82,4 @@
   width: 100%;
   bottom: 0vc;
 }
+
