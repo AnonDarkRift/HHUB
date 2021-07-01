@@ -66,11 +66,13 @@
   top: 0;
   height: auto;
   padding: 1000px 16px;
-  background-color: white;
-  color: black;
+  color: white;
   font-family: 'Lato', san-serif;
   font-size: 17px;
   background-color: #0a0a0a;
+}
+#content h2 {
+  text-align: center;
 }
 
 #copyright {
