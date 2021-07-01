@@ -1,1 +1,14 @@
+* {
+  padding: 0px;
+  border: 0px;
+  margin: 0px;
+}
+
+#header {
+  padding: 14px 16px;
+  background-color: black;
+  color: white;
+  font-family: 'Lato', san-serif;
+  text-align: center; 
+}
 
