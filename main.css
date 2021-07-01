@@ -41,10 +41,15 @@
   font-family: 'Lato', san-serif;
   font-size: 15px;
 }
+
 #menu-hidden button {
   padding: 14px;
   background-color: black;
   color: #eddddd;
+}
+
+#menu-hidden button:hover {
+  color: purple;
 }
 
 #content {
