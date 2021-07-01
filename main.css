@@ -62,10 +62,11 @@
 }
 
 #content {
+  z-index: 100;
   overflow: visible;
   top: 0;
-  height: auto;
-  padding: 1000px 16px;
+  height: 100vh;
+  padding: 14px 16px;
   color: white;
   font-family: 'Lato', san-serif;
   font-size: 17px;
