@@ -20,7 +20,7 @@
   font-size: 25px;
 }
 
-#header button {
+#header a {
   color: #eddddd;;
   background-color: black;
   font-family: 'Lato', san-serif;
@@ -48,13 +48,13 @@
   font-size: 15px;
 }
 
-#menu-hidden button {
+#menu-hidden a {
   padding: 14px;
   background-color: black;
   color: #eddddd;
 }
 
-#menu-hidden button:hover {
+#menu-hidden a:hover {
   color: purple;
 }
 
