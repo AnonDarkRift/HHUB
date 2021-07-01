@@ -23,20 +23,45 @@
   font-size: 25px;
 }
 
-#header a {
-  padding: 0px 10px;
-  text-decoration: none;
-  color: #eddddd;;
+.topnav {
+  position: relative;
   background-color: black;
-  font-family: 'Lato', san-serif;
-  font-size: 25px;
-}
-#header #title {
-  padding-right: 170px;
+  overflow: hidden;
 }
 
-#header #rHeader {
+.topnav a {
+  float: left;
+  color: #eddddd;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topnav-right {
   float: right;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav-right {
+    float: none;
+    display: block;
+  }
+
+  .topnav-centered a {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
 }
 
 #menu-hidden {
