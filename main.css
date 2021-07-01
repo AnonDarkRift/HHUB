@@ -14,7 +14,9 @@
   z-index: 1;
   height: auto;
   top: 0;
+  width: 100%;
   padding: 14px 16px;
+  display: inline-flex;
   background-color: black;
   font-family: 'Lato', san-serif;
   text-align: center; 
@@ -22,16 +24,19 @@
 }
 
 #header a {
+  padding: 0px 10px;
   text-decoration: none;
   color: #eddddd;;
   background-color: black;
   font-family: 'Lato', san-serif;
-  text-align: center; 
   font-size: 25px;
 }
+#header #title {
+  padding-right: 170px;
+}
 
-#title {
-  text-align: center;
+#header #rHeader {
+  float: right;
 }
 
 #menu-hidden {
