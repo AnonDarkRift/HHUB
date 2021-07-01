@@ -14,3 +14,12 @@
 #title {
   text-align: center;
 }
+#copyright {
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  background-color: purple;
+  float: left;
+  position: absolute;
+  top: 99%;
+}
