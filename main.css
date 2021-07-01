@@ -18,8 +18,8 @@
   text-align: center;
   font-size: 15px;
   color: white;
-  background-color: purple;
+  background-color: black;
   float: left;
   position: absolute;
-  top: 99%;
+  width: 100%;
 }
