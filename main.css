@@ -13,8 +13,6 @@
   z-index: 1;
   height: auto;
   top: 0;
-  position: -webkit-sticky;
-  position: sticky;
   padding: 14px 16px;
   background-color: black;
   font-family: 'Lato', san-serif;
@@ -32,7 +30,7 @@
   display: flex;
   color: #eddddd;
   height: auto;
-  top: 55px;
+  top: 0px;
   padding: 14px 16px;
   height: 10vh;
   position: -webkit-sticky;
@@ -76,4 +74,3 @@
   width: 100%;
   bottom: 0vc;
 }
-
