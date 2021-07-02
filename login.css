@@ -28,3 +28,18 @@
   border: solid white 4px;
 }
 
+#login-content a {
+  text-align: center;
+  display: block;
+  padding: 14px 16px;
+  width: 50%;
+  margin: auto;
+  background-color: white;
+  color: black;
+  font-size: 14px;
+  float: left;
+}
+
+#login-content a:hover {
+  border-bottom: 4px solid purple;
+}
