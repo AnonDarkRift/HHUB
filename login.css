@@ -42,4 +42,5 @@
 
 #login-content a:hover {
   border-bottom: 4px solid purple;
+  color: purple;
 }
