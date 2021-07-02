@@ -10,6 +10,9 @@
       width: 100%;
       margin: auto;
     }
+    #content {
+      padding: 50px 14px;
+}
 }
 @media (min-width: 800px) {
     #login-content {
