@@ -4,7 +4,6 @@
 #login-content {
     padding: 14px 16px;
     height: auto;
-    background-color: white;
   }
   @media (max-width: 800px) {
     #login-content {
@@ -23,9 +22,9 @@
 }
 
 #login-content input {
-  background-color: white;
-  padding: 8px 8px;
+  padding: 18px 16px;
   width: 100%;
   outline: none;
+  border: solid white 4px;
 }
 
