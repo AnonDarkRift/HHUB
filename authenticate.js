@@ -1,7 +1,7 @@
 
 
 const account_form = document.querySelector("#login-content")
-account_form.addEventListner("register-register", (e) => {
+account_form.addEventListner("#register-register", (e) => {
   const email = account_form["uname"].value;
   const password = account_form["pword"].value;
   
@@ -13,11 +13,12 @@ account_form.addEventListner("register-register", (e) => {
       fname: account_form["fname"].value,
       lname: account_form["lname"].value
     })
+    alert("test")
+    })
   .catch((error) => {
     var errorCode = error.code;
     var errorMessage = error.message;
-    // ..
-  });
+    // ...
  });
 })
 
