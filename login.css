@@ -29,6 +29,7 @@
 }
 
 #login-content a {
+  text-decoration: none;
   text-align: center;
   display: block;
   padding: 14px 16px;
