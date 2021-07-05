@@ -41,6 +41,7 @@
   font-size: 14px;
   float: left;
 }
+
 #login-content #register-register {
   width: 100%;
   margin: auto;
@@ -51,3 +52,19 @@
   color: purple;
 }
 
+#login-content button {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  padding: 14px 16px;
+  width: 50%;
+  margin: auto;
+  background-color: rgb(245, 245, 245);
+  color: black;
+  font-size: 14px;
+  float: left;
+}
+#login-content button:hover {
+  border-bottom: 4px solid purple;
+  color: purple;
+}
