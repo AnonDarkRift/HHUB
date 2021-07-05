@@ -25,7 +25,8 @@
   padding: 18px 16px;
   width: 100%;
   outline: none;
-  border: solid white 4px;
+  background-color: rgb(245, 245, 245);
+  border: solid rgb(245, 245, 245) 4px;
 }
 
 #login-content a {
@@ -35,7 +36,7 @@
   padding: 14px 16px;
   width: 50%;
   margin: auto;
-  background-color: white;
+  background-color: rgb(245, 245, 245);
   color: black;
   font-size: 14px;
   float: left;
@@ -49,3 +50,4 @@
   border-bottom: 4px solid purple;
   color: purple;
 }
+
