@@ -28,13 +28,13 @@ account_form.addEventListner("register-register" (e) => {
       fname: account_form["fname"].value,
       lname: account_form["lname"].value;
     })
-  });
-}
   .catch((error) => {
     var errorCode = error.code;
     var errorMessage = error.message;
     // ..
   });
+ });
+}
 
 firebase.auth().signInWithEmailAndPassword(email, password)
   .then((userCredential) => {
