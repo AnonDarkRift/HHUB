@@ -2,18 +2,18 @@
 <html lang="en-US">
 
 <head>
-<script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
-<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
 <link rel="stylesheet" href="main.css">
-<script type="text/js" src="main.js"></script>
+  <link rel="stylesheet" href="login.css">
+  <script type="text/js" src="main.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Horny Hub</title>
-  <link rel="shortcut icon" href="https://anondarkrift.github.io/HHUB/favicon.ico">
+<link rel="shortcut icon" href="https://anondarkrift.github.io/HHUB/favicon.ico">
+<title>Horny Hub</title>
 </head>
+
 <body>
 <div class="topnav">
   
@@ -26,15 +26,28 @@
 
 </div>
   <div id="menu-hidden">
-    <a id="menu-videos" href="vidhub.html">Videos</a>
       <a id="menu-category" href="cat.html">Categories</a>
       <a id="menu-images" href="images.html">Images</a>
     </div>
   <div id="content">
-    <h1 id="rTitle">Recommended For You</h1>
+    <form id="login-content">
+      <input type="text" id="uname" placeholder="Username or Email" required></input><br>
+    <input type="password" id="pword" placeholder="Password" required></input><br>
+  <a id="login-submit">Login</a>
+  <a id="login-register">Sign Up</a>
+      
+      
   </div>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+
   </body>
   <footer id="copyright">
   <p>Horny Hub Copyright 2021, website licensed under Mozilla Public License 2.0</p>
   </footer>
   </html>
+
