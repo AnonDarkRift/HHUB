@@ -26,7 +26,7 @@ account_form.addEventListner("register-register", (e) => {
     var user = userCredential.user;
     return db.collection("users").doc(user).set({
       fname: account_form["fname"].value,
-      lname: account_form["lname"].value;
+      lname: account_form["lname"].value
     })
   .catch((error) => {
     var errorCode = error.code;
@@ -34,7 +34,7 @@ account_form.addEventListner("register-register", (e) => {
     // ..
   });
  });
-}
+})
 
 firebase.auth().signInWithEmailAndPassword(email, password)
   .then((userCredential) => {
