@@ -40,6 +40,10 @@
   font-size: 14px;
   float: left;
 }
+#login-content #register-register {
+  width: 100%;
+  margin: auto;
+}
 
 #login-content a:hover {
   border-bottom: 4px solid purple;
