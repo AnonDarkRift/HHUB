@@ -16,7 +16,7 @@ firebase.analytics();
 
 
 const account_form = document.getQuerySelector("#login-content")
-account_form.addEventListner("register-register" (e) => {
+account_form.addEventListner("register-register", (e) => {
   const email = account_form["uname"].value;
   const password = account_form["pword"].value;
   
