@@ -61,10 +61,7 @@
   text-align: center;
   display: flex;
   color: #eddddd;
-  height: auto;
   top: 0px;
-  padding: 14px 16px;
-  height: 10vh;
   position: -webkit-sticky;
   position: sticky;
   background-color: black;
@@ -73,7 +70,7 @@
 }
 
 #menu-hidden a {
-  padding: 14px;
+  padding: 20px 20px;
   background-color: black;
   color: #eddddd;
   text-decoration: none;
@@ -81,6 +78,7 @@
 
 #menu-hidden a:hover {
   color: purple;
+  border-bottom: 2px purple solid;
 }
 
 #content {
