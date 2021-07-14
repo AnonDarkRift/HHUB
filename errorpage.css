@@ -1,1 +1,20 @@
+#content {
+    max-height: 71vh;
+}
 
+ @media(max-width: 1100px) {
+        #content {
+            max-height: 100vh;
+        }
+    }
+
+#errorTitle {
+    padding: 14px 15px;
+    font-size: 80px;
+}
+
+#errorHeader {
+    padding: 45px 16px;
+    text-align: center;
+    font-size: 50px;
+}
