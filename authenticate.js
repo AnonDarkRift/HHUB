@@ -1,47 +1,150 @@
 
+const txtEmail = document.getElementById('email');
+const txtPword = document.getElementById('pword');
+const binSignIn = document.getElementById('login-submit');
+const binSignUp = document.getElementById('register-register');
+//const binForgot = document.getElementById('forgot-pword');
+//const binSignOut = document.getElementById('log-out');
+//const binRedirect = document.getElementById('redirect');
+const fname = document.getElementById('fname');
+const lname = document.getElementById('lname');
+//var dname = document.getElementById('dname');
 
-const account_form = document.querySelector("#login-content")
-account_form.addEventListner("#register-register", (e) => {
-  const email = account_form["uname"].value;
-  const password = account_form["pword"].value;
-  
+try {
+var db = firebase.firestore();
+}
+catch {
+  console.error('error loading firestore')
+}
+
+authStateListener();
+
+function signInWithEmailPassword() {                    
+  var email = txtEmail.value;
+  var email = email.toLowerCase();
+  var password = txtPword.value;
+  // [START auth_signin_password]
+  firebase.auth().signInWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      // Signed in
+      var user = userCredential.user;
+      // ...
+    })
+    .catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      alert('Password or Email wrong, try again');
+    });
+  // [END auth_signin_password]
+}
+
+const sendVerificationEmail = () => {
+   firebase.auth().currentUser.sendEmailVerification()
+   .then(() => {
+      //verified
+      window.alert('Verification sent, check your inbox (may be in your spam files)');
+   })
+   .catch( error => {
+          console.error('error');
+          })
+}
+
+
+function signUpWithEmailPassword() {
+  var email = txtEmail.value;
+  var password = txtPword.value;
+  // [START auth_signup_password]
   firebase.auth().createUserWithEmailAndPassword(email, password)
-  .then((userCredential) => {
-    // Signed in 
-    var user = userCredential.user;
-    return db.collection("users").doc(user).set({
-      fname: account_form["fname"].value,
-      lname: account_form["lname"].value
-    })
-    alert("test")
-    })
-  .catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // ...
- });
-})
+    .then((userCredential) => {
+      // Signed in 
+      var user = firebase.auth().currentUser;
 
-firebase.auth().signInWithEmailAndPassword(email, password)
-  .then((userCredential) => {
-    // Signed in
-    var user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-  });
+      db.collection("users").add({
+          first: fname,
+          last: lname,
+          displayName: dname
+      })
+      .then((docRef) => {
+          console.log("Document written with ID: ", docRef.uid);
+      })
+      .catch((error) => {
+          console.error("Error adding document: ", error);
+      });
+     
+      // ...
+    })
+    .catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // ..
+    });
+  // [END auth_signup_password]
+}
 
-// Add a new document in collection "cities"
-db.collection("users").doc(uid).set({
-    uname: user,
-    fname: first,
-    lname: last
-})
-.then(() => {
-    console.log("Document successfully written!");
-})
-.catch((error) => {
-    console.error("Error writing document: ", error);
-});
+
+function sendPasswordReset() {
+  const email = txtEmail.value;
+  // [START auth_send_password_reset]
+  firebase.auth().sendPasswordResetEmail(email)
+    .then(() => {
+      // Password reset email sent!
+      // ..
+      window.alert('Email sent, check your inbox (the email may be in your spam files)');
+    })
+    .catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // ..
+    });
+  // [END auth_send_password_reset]
+}
+try {
+   binSignIn.addEventListener('click', e=> {
+      signInWithEmailPassword();
+      var email = txtEmail.value;
+      var password = txtPword.value;
+      makeEmailCredential(email, password);
+      document.getElementById('email_field').value;
+      document.getElementById('pass_field').value;
+      authStateListener();
+   });
+}
+catch {
+   console.log('ERROR 404: Sign In not located.')
+}
+
+try {
+   binSignUp.addEventListener('click', e=> {
+      signOut()
+      signUpWithEmailPassword();
+      var email = txtEmail.value;
+      var password = txtPword.value;
+      makeEmailCredential(email, password);
+      document.getElementById('email_field').value;
+      document.getElementById('pass_field').value;
+      sendVerificationEmail()
+      authStateListener();
+   });
+   }
+ catch(e) {
+   console.error(e);
+ }
+
+try {
+   binForgot.addEventListener('click', e=> {
+      sendPasswordReset();
+   });
+}
+catch {
+   console.log('ERROR 404: Forgot not located.')
+}
+try {
+   document.getElementById('logOut').addEventListener('click', e=> {
+       signOut();
+       authStateListener();
+       window.location.href = 'https://nexuslive.tech/';
+   });
+}
+catch {
+   console.log('ERROR 404: Sign Out not located.')
+}
